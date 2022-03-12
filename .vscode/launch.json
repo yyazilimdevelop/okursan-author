@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AuthorApplication<author>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.okursan.author.AuthorApplication",
+            "projectName": "author",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

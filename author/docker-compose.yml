@@ -1,0 +1,19 @@
+version: '3.1'
+services:
+  app:
+    container_name: okursan-author-api
+    image: okursan-author-api
+    build: ./
+    ports:
+      - "4480:4480"
+    depends_on:
+      - okursan-author-db
+  okursanauthordb:
+    container_name: postgre-author
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=okursan-author-db
