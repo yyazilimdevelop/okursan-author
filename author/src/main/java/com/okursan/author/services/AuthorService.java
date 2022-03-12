@@ -7,6 +7,7 @@ import com.okursan.author.models.response.EmptyData;
 import com.okursan.author.repositories.AuthorRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -33,10 +34,9 @@ public class AuthorService {
     }
 
     private String getEncryptedPassword(String password) {
-        // BCryptPasswordEncoder pwdEncoder = new BCryptPasswordEncoder();
-        // String pwd = pwdEncoder.encode(password);
+        BCryptPasswordEncoder pwdEncoder = new BCryptPasswordEncoder();
+        String pwd = pwdEncoder.encode(password);
 
-        String pwd = password;
         return pwd;
     }
 }
