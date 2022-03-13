@@ -43,6 +43,7 @@ public class Author {
 
     private String username;
 
+    @JsonIgnore
     private String password;
 
     private int status;
@@ -60,5 +61,4 @@ public class Author {
     @CreatedDate
     @Column(name = "sign_date", updatable = false)
     private Date signDate = new Date();
-
 }

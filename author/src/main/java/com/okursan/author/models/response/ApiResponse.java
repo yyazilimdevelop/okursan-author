@@ -27,6 +27,17 @@ public class ApiResponse<T> {
         return this;
     }
 
+    public ApiResponse<T> error(HttpStatus status) {
+        this.resultCode = status.value();
+        return this;
+    }
+
+    public ApiResponse<T> error(String _message, HttpStatus status) {
+        this.message = _message;
+        this.resultCode = status.value();
+        return this;
+    }
+
     public ApiResponse<T> exception() {
         this.resultCode = HttpStatus.INTERNAL_SERVER_ERROR.value();
         return this;
