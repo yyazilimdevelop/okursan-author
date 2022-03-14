@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.okursan</groupId>
 	<artifactId>author</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>author</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Okursan Author Project</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
