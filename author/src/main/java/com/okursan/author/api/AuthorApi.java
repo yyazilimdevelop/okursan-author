@@ -1,5 +1,6 @@
 package com.okursan.author.api;
 
+import java.security.GeneralSecurityException;
 import com.okursan.author.models.request.SignUpAuthor;
 import com.okursan.author.models.response.ApiResponse;
 import com.okursan.author.models.response.EmptyData;
@@ -26,8 +27,8 @@ public class AuthorApi {
     }
 
     @GetMapping("/get")
-    public ApiResponse<EmptyData> signIn() {
-        return authorService.signIn("aliyetking", "12345678");
+    public ApiResponse<EmptyData> signIn() throws GeneralSecurityException {
+        return authorService.signIn("aliyetking", "aliyetkin__44");
     }
 
 }
